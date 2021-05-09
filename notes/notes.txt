@@ -1,0 +1,5 @@
+docker run --name redis-container -p 6379:6379 -d redis
+
+rdcli -h 192.168.99.100
+
+https://github.com/redisson/redisson/tree/master/redisson-spring-boot-starter
