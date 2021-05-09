@@ -63,8 +63,8 @@ public class ShortnerService {
 
      private String getMD5Hash(String input) throws NoSuchAlgorithmException {
         MessageDigest md = MessageDigest.getInstance("MD5");
-       byte[] digest = md.digest(input.getBytes(StandardCharsets.ISO_8859_1));
-       String output = DatatypeConverter.printString(new String(digest));
+       byte[] digest = md.digest(input.getBytes(StandardCharsets.UTF_8));
+       String output = DatatypeConverter.printHexBinary(digest);
         return output;
         //return "FB9874569BEBF9DF1D80FA19279F08E6";
 
